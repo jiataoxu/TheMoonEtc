@@ -52,6 +52,54 @@
 	transform:scaleY(2);
 }
 
+#boat {
+	position: absolute;
+	height: 100px;
+	width: 190px;
+	top: 190%;
+	left:65%;
+
+	animation-name: float;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes float {
+	0%{
+		transform: translate(0px,-5px);
+	}
+
+	33% {transform: translate(0px,5px);;
+	}
+
+	66%{transform: translate(0px,5px);
+	}
+
+	100% {
+		transform: translate(0px,-5px);
+	}
+}
+
+#orca {
+	position: absolute;
+	height: 40%;
+	width: 40%;
+	top: 200%;
+	left:10%;
+
+	animation-name: rotate;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-delay: 5s;
+}
+
+@keyframes rotate{
+	20%, 100% {
+	    transform: rotate(360deg);
+	  }
+
+}
+
 #sadcrown {
 	margin-top:200px;
 	margin-bottom: 50px;
@@ -68,6 +116,7 @@
  }
 
 .arrow {
+	opacity:0;
 	display: block;
 	width: 254px;
 	height:91px;
@@ -75,6 +124,12 @@
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
+
+.arrow:hover {
+	opacity:1;
+}
+
+
 
 #down {
 	animation-name: jump;
@@ -141,7 +196,12 @@ h5 {
 }
 
 button {
+	opacity:0;
 	display: block;
 	margin: auto;
 	font-size: 25px;
+}
+
+button:hover {
+	opacity:1;
 }
