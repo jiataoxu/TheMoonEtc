@@ -1,0 +1,67 @@
+
+#moon {
+	position: absolute;
+	z-index:3;
+	left:50%;
+	margin-left:-250px;
+	width:500px;
+	height:500px;
+}
+
+#starfield {
+	position: absolute;
+	z-index:1;
+	left:50%;
+	margin-left:-950px;
+}
+
+.centerContainer{
+	margin-left: 50%;
+}
+#mountain {
+	margin-top: 1000px;
+	margin-left: -950px;
+}
+
+.wrapper {
+	margin-left:50%;
+}
+
+.grow { 
+	transition: transform .2s;
+ }
+.grow:active { 
+	transform: scale(1.2);
+ }
+
+.spin {
+	transition: transform 1s;
+}
+
+.spin:active {
+	transform:rotate(360deg);
+}
+
+.scaleY {
+	transition: transform 15s;
+}
+
+.scaleY:hover {
+	transform:scaleY(1.5);
+}
+
+#sadcrown {
+	margin-top:1000px;
+	margin-bottom: 50px;
+	width:20%;
+	height:20%;
+	margin-left:-100px;
+}
+
+body {
+	margin:40px;
+	padding: 100px;
+	border-color: white;
+	border-style: solid;
+	border-width: 30px;
+}
