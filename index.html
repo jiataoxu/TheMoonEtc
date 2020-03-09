@@ -1,30 +1,70 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- https://www.nasa.gov/image-feature/carina-nebulas-mystic-mountain -->
 		<meta charset = "utf-8">
 		<title>NEEEET</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
 	<body style = "background: url(img/pureblack.png)">	
-		<div class = "grow spin">
-			<img id = "moon" src = "img/moon.png">
+		<div class = "grow">
+			<img id = "moon" src = "img/moon.png" role="button" onclick ="window.open('moon.html', '_blank');" >
+
 		</div>
 
-		<div class = "grow spin">
-			<img id = "starfield" src = "img/starfield.png" >
+		<div class = "spin">
+			<img id = "starfield" src = "img/starfield.png" role="button" onclick ="window.open('https://www.nasa.gov/image-feature/carina-nebulas-mystic-mountain', '_blank')">
 		</div>
 
 		<div class = "scaleY">
 			<div class = "centerContainer">
-				<img id = "mountain" src = "img/mountain.png">
+				<img id = "mountain" src = "img/mountain.png" role="button" onclick ="setTimeout(function() {window.open('mountain.html', '_blank')},1000);">
 			</div>
 		</div>
 
+		<img class = "arrow" id = "down" src = "img/arrows.png">
+		<button class = "popp" onclick="Generate()">Generate Cuteness</button>
+		<img class = "arrow" id = "up" src = "img/arrowsOPP.png">
+
 		<div class = "centerContainer">
-			<img id = "sadcrown" src = "img/patten.png">
-		</div>	
+			<img class = "popp" id = "sadcrown" src = "img/patten.png" role="button" onclick ="window.open('https://github.com/jiataoxu/jiataoxu.github.io', '_blank');">
+		</div>
+
+
+
+		<p>The Moon, The mountain, the stars, and some extras</p>
+		<p>by Jiatao Xu</p>	
+		<br>
+		<h5 style="color:white;">click around; move around; do your thing</h5>
 	
+	<script type="text/javascript">
+		function Generate() {
+			var random = Math.floor(Math.random()*5);
+			var pic0 = "img/cats/cat0.jpg";
+			var pic1 = "img/cats/cat1.jpg";
+			var pic2 = "img/cats/cat2.jpg";
+			var pic3 = "img/cats/cat3.jpg";
+			var pic4 = "img/cats/cat4.jpg";
+
+			if (random == 0) {
+				window.open(pic0, '_blank');
+			}
+			else if (random == 1) {
+				window.open(pic1, '_blank');
+			}
+			else if (random == 2) {
+				window.open(pic2, '_blank');
+			}
+			else if (random == 3) {
+				window.open(pic3, '_blank');
+			}
+			else if (random == 4) {
+				window.open(pic4, '_blank');
+			}
+
+		}
+	</script>
 
 	</body>
 </html>

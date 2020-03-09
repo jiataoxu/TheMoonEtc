@@ -3,12 +3,13 @@
 	position: absolute;
 	z-index:3;
 	left:50%;
-	margin-left:-250px;
-	width:500px;
-	height:500px;
+	margin-left:-100px;
+	width:200px;
+	height:200px;
 }
 
 #starfield {
+	transform:scale(0.5);
 	position: absolute;
 	z-index:1;
 	left:50%;
@@ -19,9 +20,8 @@
 	margin-left: 50%;
 }
 #mountain {
-	width: 20%
-	height:20%;
-	margin-top: 1000px;
+	transform:scale(0.5);
+	margin-top: 400px;
 	margin-left: -950px;
 }
 
@@ -32,7 +32,7 @@
 .grow { 
 	transition: transform .2s;
  }
-.grow:active { 
+.grow:hover { 
 	transform: scale(1.2);
  }
 
@@ -40,7 +40,7 @@
 	transition: transform 1s;
 }
 
-.spin:active {
+.spin:hover {
 	transform:rotate(360deg);
 }
 
@@ -49,21 +49,99 @@
 }
 
 .scaleY:hover {
-	transform:scaleY(1.5);
+	transform:scaleY(2);
 }
 
 #sadcrown {
-	margin-top:1000px;
+	margin-top:200px;
 	margin-bottom: 50px;
-	width:20%;
-	height:20%;
-	margin-left:-100px;
+	width:100px;
+	height:100px;
+	margin-left:-50px;
+}
+
+.popp { 
+	transition: transform .2s;
+ }
+.popp:hover { 
+	transform: scale(1.2);
+ }
+
+.arrow {
+	display: block;
+	width: 274px;
+	height:141px;
+	margin:auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#down {
+	animation-name: jump;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+}
+
+#up
+{
+	animation-name: jumpOPP;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+}
+@keyframes jumpOPP {
+	0%{
+		transform: translate(0px,5px);
+	}
+
+	33% {transform: translate(0px,-5px);;
+	}
+
+	66%{transform: translate(0px,-5px);
+	}
+
+	100% {
+		transform: translate(0px,5px);
+	}
+}
+@keyframes jump {
+	0%{
+		transform: translate(0px,-5px);
+	}
+
+	33% {transform: translate(0px,5px);
+	}
+
+	66%{transform: translate(0px,5px);
+	}
+
+	100% {
+		transform: translate(0px,-5px);
+	}
 }
 
 body {
-	margin:40px;
+	margin:20%;
 	padding: 100px;
 	border-color: white;
 	border-style: solid;
-	border-width: 30px;
+	border-width: 15px;
+
+}
+
+p {
+	font-family: Arial;
+	color: white;
+	text-align: center;
+}
+
+h5 {
+	font-family: Arial;
+	color: white;
+	text-align: center;
+}
+
+button {
+	display: block;
+	margin: auto;
+	font-size: 25px;
 }
